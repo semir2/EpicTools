@@ -20,6 +20,9 @@ EpicMerge <- function(x,...){
   if (narg<1) {
     stop("You must merge at least two matrices")
   }
+  if (narg==1) {
+    output.name=args[[1]]
+  }
   if (narg==2) {
     output.name <- EpicJoin(args[[1]], args[[2]], by.x = rownames(args[[1]]), by.y = rownames(args[[2]]), all.x = TRUE, all.y = TRUE)
 
